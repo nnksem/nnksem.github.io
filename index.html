@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>nnksem — landing pages, launch videos, bots</title>
+  <meta name="description" content="Landing pages, motion launch videos and Telegram bots for indie products. Preview before you pay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav__row">
+      <a class="nav__brand" href="#top">nnksem<span>.</span></a>
+      <nav class="nav__links">
+        <a href="#work"><span class="en">Work</span><span class="ru">Работы</span></a>
+        <a href="#offer"><span class="en">Pricing</span><span class="ru">Цены</span></a>
+        <a href="#process"><span class="en">Process</span><span class="ru">Как работаю</span></a>
+      </nav>
+      <button class="lang" id="lang" type="button" aria-label="Switch language">RU</button>
+      <a class="btn btn--small" href="#contact"><span class="en">Get a preview</span><span class="ru">Получить превью</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="kicker"><span class="en">Landing pages · Launch videos · Bots</span><span class="ru">Лендинги · Ролики · Боты</span></p>
+      <h1>
+        <span class="en">Your product, ready to launch.<br><em>In 72 hours.</em></span>
+        <span class="ru">Ваш продукт готов к запуску.<br><em>За 72 часа.</em></span>
+      </h1>
+      <p class="lead">
+        <span class="en">I build landing pages, motion launch videos and Telegram bots for indie makers and small teams. You see a preview before you pay anything.</span>
+        <span class="ru">Делаю лендинги, анимированные ролики и Telegram-ботов для небольших продуктов и бизнеса. Набросок вы видите до оплаты.</span>
+      </p>
+      <div class="hero__cta">
+        <a class="btn" href="#contact"><span class="en">Get a free preview</span><span class="ru">Получить набросок бесплатно</span></a>
+        <a class="link" href="#work"><span class="en">See the work ›</span><span class="ru">Смотреть работы ›</span></a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="work">
+      <div class="section__head">
+        <p class="kicker"><span class="en">Work</span><span class="ru">Работы</span></p>
+        <h2><span class="en">Built for my own products first.</span><span class="ru">Сначала — для своих продуктов.</span></h2>
+        <p class="muted"><span class="en">Apps I made, and the pages and films around them. The bot is a demo concept.</span><span class="ru">Мои приложения и сделанные для них сайты и ролики. Бот — демо-концепт.</span></p>
+      </div>
+
+      <div class="grid">
+        <article class="card card--wide">
+          <div class="card__media">
+            <video controls playsinline preload="none" poster="assets/apsis-poster.jpg">
+              <source src="assets/apsis-launch.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card__body">
+            <p class="tag"><span class="en">Launch kit · macOS app</span><span class="ru">Лендинг + ролик · приложение для macOS</span></p>
+            <h3>Apsis</h3>
+            <p class="muted"><span class="en">A 26-second motion launch film made from real app screenshots, plus a full landing page with light and dark themes.</span><span class="ru">Ролик к запуску на 26 секунд из настоящих скриншотов приложения и полноценный лендинг со светлой и тёмной темой.</span></p>
+            <div class="card__links">
+              <a class="link" href="work/apsis/"><span class="en">Open the landing page ›</span><span class="ru">Открыть лендинг ›</span></a>
+              <a class="link" href="https://github.com/nnksem/apsis"><span class="en">Product on GitHub ›</span><span class="ru">Продукт на GitHub ›</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <video controls playsinline preload="none" poster="assets/lucent-poster.jpg">
+              <source src="assets/lucent-promo.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card__body">
+            <p class="tag"><span class="en">Promo video</span><span class="ru">Промо-ролик</span></p>
+            <h3>Lucent</h3>
+            <p class="muted"><span class="en">A 20-second promo for a Mac video player that upscales video with neural networks.</span><span class="ru">20-секундное промо видеоплеера для Mac, который улучшает видео нейросетями.</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/bot-demo.gif" alt="Demo of a Telegram booking bot: a client picks a service, barber and time; the barber gets the booking" loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="tag"><span class="en">Telegram bot · demo concept</span><span class="ru">Telegram-бот · демо-концепт</span></p>
+            <h3><span class="en">Booking bot</span><span class="ru">Бот онлайн-записи</span></h3>
+            <p class="muted"><span class="en">A client books a service, barber and time in 30 seconds; the barber gets the booking and a daily summary. The brand is fictional.</span><span class="ru">Клиент сам выбирает услугу, мастера и время за 30 секунд, мастер получает запись и сводку за день. Бренд вымышленный.</span></p>
+          </div>
+        </article>
+
+        <article class="card card--wide">
+          <div class="card__media card__media--shot">
+            <img src="assets/soyka.png" alt="Soyka website, desktop" loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="tag"><span class="en">Website · hand-coded</span><span class="ru">Сайт · без конструктора</span></p>
+            <h3><span class="en">Soyka</span><span class="ru">Сойка</span></h3>
+            <p class="muted"><span class="en">A three-page site for an AI-visibility service: clean HTML and CSS, fast on phones, no site builder.</span><span class="ru">Три страницы для сервиса проверки видимости в ИИ: чистый HTML и CSS, быстро открывается с телефона, без конструктора.</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="offer">
+      <div class="section__head">
+        <p class="kicker"><span class="en">Pricing</span><span class="ru">Цены</span></p>
+        <h2><span class="en">Fixed prices. No calls needed.</span><span class="ru">Фиксированные цены. Без созвонов.</span></h2>
+      </div>
+      <div class="offers">
+        <div class="offer offer--main">
+          <h3>Launch kit</h3>
+          <p class="price"><span class="en">from $250</span><span class="ru">от 15 000 ₽</span></p>
+          <p class="muted"><span class="en">Landing page + 30–45 s motion video about your product. Delivered in 72 hours.</span><span class="ru">Лендинг и ролик на 30–45 секунд о вашем продукте. Готово за 72 часа.</span></p>
+        </div>
+        <div class="offer">
+          <h3><span class="en">Launch video</span><span class="ru">Ролик</span></h3>
+          <p class="price"><span class="en">from $150</span><span class="ru">от 1 500 ₽</span></p>
+          <p class="muted"><span class="en">Product demo, kinetic typography or logo animation. 16:9 and 9:16.</span><span class="ru">Демо продукта, кинетическая типографика или анимация логотипа. 16:9 и 9:16.</span></p>
+        </div>
+        <div class="offer">
+          <h3><span class="en">Landing page</span><span class="ru">Лендинг</span></h3>
+          <p class="price"><span class="en">from $200</span><span class="ru">от 4 000 ₽</span></p>
+          <p class="muted"><span class="en">Responsive, fast, hand-coded. Source files are yours.</span><span class="ru">Адаптивный, быстрый, свой код. Исходники ваши.</span></p>
+        </div>
+        <div class="offer">
+          <h3><span class="en">Telegram bot</span><span class="ru">Telegram-бот</span></h3>
+          <p class="price"><span class="en">from $150</span><span class="ru">от 3 000 ₽</span></p>
+          <p class="muted"><span class="en">Leads, bookings, catalog or FAQ. Can also move a bot to MAX.</span><span class="ru">Заявки, запись, каталог, FAQ. Перенос бота в MAX.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="process">
+      <div class="section__head">
+        <p class="kicker"><span class="en">Process</span><span class="ru">Как работаю</span></p>
+        <h2><span class="en">Preview first. Pay when you like it.</span><span class="ru">Сначала набросок. Оплата — если нравится.</span></h2>
+      </div>
+      <ol class="steps">
+        <li><b>01</b><h3><span class="en">Send a link</span><span class="ru">Пришлите ссылку</span></h3><p class="muted"><span class="en">Your product or current site, and two lines about the goal.</span><span class="ru">На продукт или текущий сайт и пару строк о задаче.</span></p></li>
+        <li><b>02</b><h3><span class="en">Get a free preview</span><span class="ru">Получите набросок</span></h3><p class="muted"><span class="en">A first screen or a 10-second clip, usually within a day.</span><span class="ru">Первый экран или 10 секунд ролика, обычно в течение дня.</span></p></li>
+        <li><b>03</b><h3><span class="en">Launch in 72 hours</span><span class="ru">Запуск за 72 часа</span></h3><p class="muted"><span class="en">Two rounds of edits included. All in writing, async.</span><span class="ru">Две правки включены. Всё в переписке.</span></p></li>
+      </ol>
+    </section>
+
+    <section class="section wrap contact" id="contact">
+      <h2><span class="en">Tell me about your product.</span><span class="ru">Расскажите о проекте.</span></h2>
+      <p class="muted"><span class="en">Reply where you found this link: I answer in writing within a day.</span><span class="ru">Напишите туда, где нашли эту ссылку: отвечаю в переписке в течение дня.</span></p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© 2026 nnksem</span>
+    <a class="link" href="https://github.com/nnksem">GitHub</a>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

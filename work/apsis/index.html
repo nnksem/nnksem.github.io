@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apsis — free system monitor and cleaner for macOS</title>
+  <meta name="description" content="Apsis is a free, open-source system monitor and cleaner for macOS. Native, private, and careful about what it deletes.">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="Apsis — free system monitor and cleaner for macOS">
+  <meta property="og:description" content="Native, private, and careful about what it deletes. MIT licensed.">
+  <meta property="og:image" content="assets/overview.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try {
+      var t = localStorage.getItem("apsis-theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="Apsis home">
+        <img src="assets/icon.png" width="32" height="32" alt="">
+        <span>Apsis</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#features">Features</a>
+        <a href="#safety">Safety</a>
+        <a href="#open-source">Open source</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch color theme">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+        <a class="icon-btn" href="https://github.com/nnksem/apsis" aria-label="Apsis on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a class="btn btn--primary btn--sm" href="https://github.com/nnksem/apsis/releases/latest">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="orbits" aria-hidden="true">
+        <span class="orbit orbit--1"><i class="planet planet--sun"></i></span>
+        <span class="orbit orbit--2"><i class="planet planet--earth"></i></span>
+        <span class="orbit orbit--3"><i class="planet planet--mars"></i></span>
+      </div>
+      <div class="wrap hero__inner">
+        <p class="eyebrow"><span class="dot"></span> Version 1.0.0 · free and open source</p>
+        <h1>Keep your Mac<br>in a <em>healthy orbit</em>.</h1>
+        <p class="lead">A free, open-source system monitor and cleaner for macOS. Native, private, and careful about what it deletes.</p>
+        <div class="cta">
+          <a class="btn btn--primary btn--lg" href="https://github.com/nnksem/apsis/releases/latest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
+            Download for macOS
+          </a>
+          <a class="btn btn--ghost btn--lg" href="https://github.com/nnksem/apsis">View source on GitHub</a>
+        </div>
+        <ul class="meta">
+          <li>macOS 26 Tahoe or later</li>
+          <li>Universal app</li>
+          <li>MIT license</li>
+          <li>No accounts or telemetry</li>
+        </ul>
+      </div>
+      <div class="wrap">
+        <figure class="hero__shot">
+          <img src="assets/overview.png" width="1440" height="978" alt="Apsis Overview window: CPU load, memory pressure, battery health, disk space, network traffic, top processes and a Mac health score.">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Launch film -->
+    <section class="section film" aria-labelledby="film-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="kicker">Launch film</p>
+          <h2 id="film-title">Apsis in motion</h2>
+        </div>
+        <div class="film__frame" id="film">
+          <video id="film-video" playsinline controls preload="none" aria-label="Apsis launch film">
+            <source src="launch.mp4" type="video/mp4">
+          </video>
+          <button class="film__cover" id="film-play" type="button" aria-label="Play the launch film">
+            <span class="film__orbit" aria-hidden="true"></span>
+            <span class="film__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5Z"/></svg>
+            </span>
+            <span class="film__label" id="film-label">Play the launch film</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="kicker">Six tools, one app</p>
+          <h2 id="features-title">Everything your Mac needs, nothing it doesn’t</h2>
+          <p class="sub">Each section of Apsis has its own planet. Together they cover monitoring, cleanup and upkeep without a subscription.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <i class="planet planet--sun" aria-hidden="true"></i>
+            <h3>Overview</h3>
+            <p>CPU per core, memory pressure and swap, battery health and cycles, power draw, disk, network, top processes and an overall Mac health score.</p>
+          </article>
+          <article class="card">
+            <i class="planet planet--earth" aria-hidden="true"></i>
+            <h3>Cleanup</h3>
+            <p>Caches, logs, browser and developer junk, old installers and build artifacts. You review every category before anything is removed.</p>
+          </article>
+          <article class="card">
+            <i class="planet planet--mars" aria-hidden="true"></i>
+            <h3>Applications</h3>
+            <p>Uninstall apps together with their files in Library, find data left behind by apps you already removed, and check Homebrew, Sparkle and App Store updates.</p>
+          </article>
+          <article class="card">
+            <i class="planet planet--jupiter" aria-hidden="true"></i>
+            <h3>Storage</h3>
+            <p>A treemap of any folder or the whole disk. Drill into folders, reveal them in Finder or move them to the Trash.</p>
+          </article>
+          <article class="card">
+            <i class="planet planet--mercury" aria-hidden="true"></i>
+            <h3>Maintenance</h3>
+            <p>Safe macOS maintenance tasks — Finder and Spotlight caches, network cache, damaged preferences — and a list of everything that launches at login.</p>
+          </article>
+          <article class="card">
+            <span class="menubar-glyph" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 9h18M7 13.5h4M7 16h7"/></svg>
+            </span>
+            <h3>Menu bar</h3>
+            <p>CPU and memory at a glance, with a mini dashboard. An optional indicator shows when the camera or microphone is in use.</p>
+          </article>
+        </div>
+        <p class="native-note">A regular SwiftUI app that follows the system: light and dark mode, your accent color, Reduce Motion, and English or Russian depending on your language settings.</p>
+      </div>
+    </section>
+
+    <!-- Showcase -->
+    <section class="section showcase" aria-label="Screenshots">
+      <div class="wrap">
+        <div class="row">
+          <div class="row__text">
+            <p class="kicker kicker--earth">Cleanup</p>
+            <h3>See what can go before it goes</h3>
+            <p>Every scan ends in a list grouped by category — user caches and logs, developer tools, installers, browser and app caches. Expand any group, untick what you want to keep, then clean up.</p>
+          </div>
+          <figure class="row__shot"><img src="assets/cleanup.png" width="1440" height="978" loading="lazy" alt="Cleanup screen listing junk categories with item counts and sizes, each with a checkbox, and a Clean Up button."></figure>
+        </div>
+        <div class="row row--flip">
+          <div class="row__text">
+            <p class="kicker kicker--mars">Applications</p>
+            <h3>Uninstall apps, not just the .app</h3>
+            <p>Pick an app and Apsis shows the files it keeps in Library before moving anything to the Trash. Switch to Leftovers for data from apps you already deleted, or Updates for Homebrew, Sparkle and App Store versions.</p>
+          </div>
+          <figure class="row__shot"><img src="assets/applications.png" width="1440" height="978" loading="lazy" alt="Applications screen with installed apps sorted by size and a side panel listing the files that will be removed with the selected app."></figure>
+        </div>
+        <div class="row">
+          <div class="row__text">
+            <p class="kicker kicker--jupiter">Storage</p>
+            <h3>Find out where the space went</h3>
+            <p>A treemap of the whole disk or any folder, with a list of the largest items next to it. Drill down, reveal in Finder, or move a folder to the Trash.</p>
+          </div>
+          <figure class="row__shot"><img src="assets/storage.png" width="1440" height="978" loading="lazy" alt="Storage screen showing a colored treemap of the startup disk and a Largest Items list."></figure>
+        </div>
+        <div class="row row--flip">
+          <div class="row__text">
+            <p class="kicker kicker--mercury">Maintenance</p>
+            <h3>Routine upkeep in one pass</h3>
+            <p>Run Mole’s safe maintenance tasks — DNS and Spotlight checks, Finder and thumbnail caches, broken preferences — and review everything that launches at login. A preview run shows the result without changing anything.</p>
+          </div>
+          <figure class="row__shot"><img src="assets/maintenance.png" width="1440" height="978" loading="lazy" alt="Maintenance screen after a preview run: a diagnosis summary and a list of completed tasks, with the note that nothing was changed."></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety -->
+    <section class="section safety" id="safety" aria-labelledby="safety-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="kicker">Safety first</p>
+          <h2 id="safety-title">Apsis deletes files, so it is built to be conservative</h2>
+        </div>
+        <ul class="checks">
+          <li><strong>You confirm every cleanup.</strong> Every scan ends in a list you review, and Apsis asks before deleting anything. Preview mode never deletes anything.</li>
+          <li><strong>One gatekeeper.</strong> Every deletion goes through a single service with hard rules: system folders, the Keychain, iCloud, Mail, Messages, SSH and cloud credentials, crypto wallets, Documents, Desktop and Apple’s own apps are always off limits.</li>
+          <li><strong>Never Touch list.</strong> Right-click anything to protect it, or manage the list in Settings.</li>
+          <li><strong>Trash by default</strong> for apps and their files. Downloaded installers always go to the Trash.</li>
+          <li><strong>Running apps are left alone.</strong> Their caches are hidden from the list and skipped at deletion time.</li>
+          <li><strong>Build folders only inside real projects.</strong> node_modules, build or target are offered only next to a project file.</li>
+          <li><strong>Every deletion is logged</strong> to <code>~/Library/Logs/Apsis/operations.log</code> and shown in History.</li>
+        </ul>
+        <div class="privacy">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.4 7.5 9.5 4.4-1.1 7.5-4.9 7.5-9.5V6Z"/><path d="m8.8 12 2.2 2.2 4.3-4.4"/></svg>
+          <div>
+            <h3>Private by design</h3>
+            <p>No accounts, no analytics, no telemetry. Apsis only goes online when you ask it to: to check for app updates or for a new version of Apsis on GitHub.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open source -->
+    <section class="section" id="open-source" aria-labelledby="oss-title">
+      <div class="wrap">
+        <div class="oss">
+          <div class="oss__text">
+            <p class="kicker">Open source &amp; free</p>
+            <h2 id="oss-title">Free forever. Read every line.</h2>
+            <p>Apsis is MIT-licensed and developed in the open on GitHub. There is no paid tier, no trial and no upsell — the download is the whole app. Since it touches your files, you can check exactly what it does before you trust it.</p>
+            <ul class="pills">
+              <li>MIT license</li>
+              <li>Swift &amp; SwiftUI</li>
+              <li>Engine tests</li>
+              <li>English &amp; Russian</li>
+            </ul>
+            <div class="cta cta--left">
+              <a class="btn btn--primary" href="https://github.com/nnksem/apsis">Star on GitHub</a>
+              <a class="btn btn--ghost" href="https://github.com/nnksem/apsis/blob/main/CONTRIBUTING.md">Contribute</a>
+            </div>
+            <p class="small">Cleanup and maintenance rules come from <a href="https://github.com/tw93/Mole">Mole</a> by tw93. Apsis runs the Mole command-line tool when it’s installed and doesn’t include any of its code. New translations are welcome.</p>
+          </div>
+          <div class="terminal" role="group" aria-label="Build Apsis from source">
+            <div class="terminal__bar">
+              <span></span><span></span><span></span>
+              <em>Build from source</em>
+              <button class="copy" type="button" data-copy="brew install xcodegen&#10;git clone https://github.com/nnksem/apsis.git&#10;cd apsis&#10;make run">Copy</button>
+            </div>
+<pre><code><span class="c"># needs Xcode 26+ and XcodeGen</span>
+<span class="p">$</span> brew install xcodegen
+<span class="p">$</span> git clone https://github.com/nnksem/apsis.git
+<span class="p">$</span> cd apsis
+<span class="p">$</span> make run   <span class="c"># Release build into ~/Applications</span>
+<span class="p">$</span> make test  <span class="c"># run the engine tests</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Install -->
+    <section class="section install" aria-labelledby="install-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="kicker">Get started</p>
+          <h2 id="install-title">Up and running in three steps</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Download</h3>
+            <p>Get <strong>Apsis-&lt;version&gt;.dmg</strong> from the <a href="https://github.com/nnksem/apsis/releases/latest">latest release</a> and drag Apsis to Applications.</p>
+          </li>
+          <li>
+            <h3>Allow the first launch</h3>
+            <p>Apsis isn’t notarized, so open it once, then click <strong>Open Anyway</strong> in System Settings → Privacy &amp; Security.</p>
+          </li>
+          <li>
+            <h3>Give it Full Disk Access</h3>
+            <p>Recommended, so scans can see all of Library. Optionally <code>brew install mole</code> for the full rule set.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap wrap--narrow">
+        <div class="section__head">
+          <p class="kicker">FAQ</p>
+          <h2 id="faq-title">Questions, answered</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is Apsis really free?</summary>
+            <p>Yes. Apsis is free and open source under the MIT license. There are no paid features, subscriptions or ads.</p>
+          </details>
+          <details>
+            <summary>Why does macOS block Apsis the first time I open it?</summary>
+            <p>Notarization by Apple requires a paid developer account, so Apsis is signed ad hoc. Open it once, then go to System Settings → Privacy &amp; Security and click <strong>Open Anyway</strong>. Or run <code>xattr -dr com.apple.quarantine /Applications/Apsis.app</code>.</p>
+          </details>
+          <details>
+            <summary>Which Macs does it run on?</summary>
+            <p>Apsis requires macOS 26 Tahoe or later. It’s tested on macOS 27 with Apple silicon. The download is a universal app, but Intel Macs are untested.</p>
+          </details>
+          <details>
+            <summary>Why does it ask for Full Disk Access?</summary>
+            <p>Without it, macOS hides parts of Library from scans. Because Apsis is signed ad hoc, macOS treats each update as a new app — after updating, switch Full Disk Access for Apsis off and on again.</p>
+          </details>
+          <details>
+            <summary>What is Mole, and do I need it?</summary>
+            <p><a href="https://github.com/tw93/Mole">Mole</a> is an open-source command-line cleaner by tw93. It’s optional: without it, Cleanup uses Apsis’s built-in rules and Maintenance is unavailable. With <code>brew install mole</code> you get the full set of cleanup and maintenance rules.</p>
+          </details>
+          <details>
+            <summary>Can Apsis delete something important?</summary>
+            <p>It’s built to avoid that: you review every list, protected locations are always off limits, apps go to the Trash by default, and Preview mode never deletes anything. Still, it’s software that deletes files — keep backups and read the list before you click Clean Up.</p>
+          </details>
+          <details>
+            <summary>Does Apsis collect any data?</summary>
+            <p>No. There are no accounts, analytics or telemetry. It only goes online when you check for updates.</p>
+          </details>
+          <details>
+            <summary>How do I uninstall Apsis?</summary>
+            <p>Turn off Open at login in Settings, quit Apsis from the menu bar and move it to the Trash. Then remove <code>~/Library/Application Support/Apsis</code>, <code>~/Library/Logs/Apsis</code>, <code>~/Library/Caches/io.github.nnksem.apsis</code> and <code>~/Library/Preferences/io.github.nnksem.apsis.plist</code>.</p>
+          </details>
+          <details>
+            <summary>Why the name “Apsis”?</summary>
+            <p>An apsis is the point of an orbit nearest to or farthest from the body it circles. Each section of the app has its own planet: the Sun for Overview, Earth for Cleanup, Mars for Applications, Jupiter for Storage and Mercury for Maintenance.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section final">
+      <div class="wrap">
+        <div class="final__card">
+          <img src="assets/icon.png" width="88" height="88" alt="" loading="lazy">
+          <h2>Give your Mac a checkup</h2>
+          <p>Free, open source, and careful with your files.</p>
+          <div class="cta">
+            <a class="btn btn--primary btn--lg" href="https://github.com/nnksem/apsis/releases/latest">Download Apsis</a>
+            <a class="btn btn--ghost btn--lg" href="https://github.com/nnksem/apsis/blob/main/CHANGELOG.md">What’s new in 1.0.0</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="brand brand--small">
+        <img src="assets/icon.png" width="24" height="24" alt="">
+        <span>Apsis</span>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="https://github.com/nnksem/apsis">GitHub</a>
+        <a href="https://github.com/nnksem/apsis/releases">Releases</a>
+        <a href="https://github.com/nnksem/apsis/blob/main/CHANGELOG.md">Changelog</a>
+        <a href="https://github.com/nnksem/apsis/blob/main/SECURITY.md">Security</a>
+        <a href="https://github.com/nnksem/apsis/blob/main/README.ru.md" hreflang="ru">По-русски</a>
+      </nav>
+      <p class="footer__legal">© 2026 Nikita · <a href="https://github.com/nnksem/apsis/blob/main/LICENSE">MIT License</a> · Provided as is, without warranty. Not affiliated with Apple.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
